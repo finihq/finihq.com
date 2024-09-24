@@ -16,7 +16,7 @@
             background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 50px 0;
+            padding: 50px 20px;
         }
         header h1 {
             margin: 0;
@@ -32,6 +32,8 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
         }
         section {
             padding: 50px 20px;
@@ -48,25 +50,30 @@
         .screenshots {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
             margin-top: 30px;
         }
         .screenshots img {
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             height: auto;
             border-radius: 10px;
         }
         .features {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 50px;
         }
         .feature {
-            width: 250px;
+            width: 100%;
+            max-width: 250px;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 15px 0;
         }
         footer {
             background-color: #333;
@@ -77,6 +84,45 @@
         footer a {
             color: #4CAF50;
             text-decoration: none;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .screenshots img {
+                max-width: 150px;
+            }
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            header a {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .screenshots img {
+                max-width: 120px;
+            }
+            .feature {
+                max-width: 95%;
+            }
         }
     </style>
 </head>
@@ -93,8 +139,11 @@
     <p>Fini makes learning to code easy and fun, offering bite-sized lessons and quizzes to help you master programming languages like Python, JavaScript, and more. Whether you're a beginner or looking to sharpen your skills, Fini provides a clean, user-friendly interface and engaging content to guide you.</p>
     <div class="screenshots">
         <img src="screenshot1.png" alt="Screenshot 1">
-        <img src="screenshot2.png" alt="Screenshot 2">
         <img src="screenshot3.png" alt="Screenshot 3">
+        <img src="screenshot2.png" alt="Screenshot 2">
+        <img src="screenshot4.png" alt="Screenshot 4">
+        <img src="screenshot (5).png" alt="Screenshot 4">
+        <img src="screenshot (6).png" alt="Screenshot 4">
     </div>
 </section>
 
@@ -127,7 +176,7 @@
 </section>
 
 <footer>
-    <p>Privacy Policy | <a href="privacy-policy-url">Terms of Service</a></p>
+    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
     <p>© 2024 Orhan Erday. All rights reserved.</p>
 </footer>
 
